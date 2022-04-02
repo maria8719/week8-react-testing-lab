@@ -37,6 +37,7 @@ Importing the component(s) to your test file is simulating the same effect as im
 We then write our test:
 
 ```JS
+// string description with test function:
 test('renders Hello World', () => {
   render(<App />);
   ...
