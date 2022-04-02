@@ -43,8 +43,8 @@ The code example above, it renders the ```<App />``` compoment and any children 
 ```JS
 test('renders Hello World', () => {
   render(<App />);
-  const elem = screen.getByText(/Hello World/i);
-  expect(elem).toBeInTheDocument();
+  const elemText = screen.getByText(/Hello World$/i); 
+  expect(elemText).toBeInTheDocument();
 });
 ```
 
