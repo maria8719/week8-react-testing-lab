@@ -43,12 +43,18 @@ The code example above, it renders the ```<App />``` compoment and any children 
 ```JS
 test('renders Hello World', () => {
   render(<App />);
-  const elemText = screen.getByText(/Hello World$/i); 
+  const elemText = screen.getByText(/hello world$/i); 
   expect(elemText).toBeInTheDocument();
 });
 ```
 
 The updated code above finds a specific element inside of ```<App />``` via the <a href="https://testing-library.com/docs/queries/about/#screen">screen API</a> checking the text returned by using <a href="https://testing-library.com/docs/queries/bytext/">getByText</a> query method.
+
+The ```/Hello World$/i``` that checks for the exact string (ignoring case) of "hello world".
+
+So when you run ```npm test``` you will get this in your VSC terminal:
+
+![test result](images/initial_test.png)
 
 <strong>Note:</strong> Queries are the methods that Testing Library gives you to find elements on the page. There are several types of queries ("get", "find", "query"); the difference between them is whether the query will throw an error if no element is found or if it will return a Promise and retry. 
 
