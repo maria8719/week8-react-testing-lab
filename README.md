@@ -59,7 +59,7 @@ test('renders Hello World', () => {
 Renders the ```<App />``` compoment and any children components it uses to the virtual DOM. Once it is rendered, it then can be tested (must be rendered first).
 
 ```JS
-test('renders Hello World', () => {
+test('renders hello world', () => {
   render(<App />);
   const elemText = screen.getByText(/hello world$/i); 
   expect(elemText).toBeInTheDocument();
