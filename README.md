@@ -38,13 +38,25 @@ We then write our test:
 ```JS
 // string description with test function:
 test('renders Hello World', () => {
+  ...
+  ...
+  ...
+});
+```
+
+This just defines our test block and description. But this is a 'passing' test because
+it does not throw an error.
+
+```JS
+// string description with test function:
+test('renders Hello World', () => {
   render(<App />);
   ...
   ...
 });
 ```
 
-The code example above renders the ```<App />``` compoment and any children components it uses to the virtual DOM. Once it is rendered, it then can be tested (must be rendered first).
+Renders the ```<App />``` compoment and any children components it uses to the virtual DOM. Once it is rendered, it then can be tested (must be rendered first).
 
 ```JS
 test('renders Hello World', () => {
@@ -54,7 +66,7 @@ test('renders Hello World', () => {
 });
 ```
 
-The updated code above finds a specific element inside of ```<App />``` via the <a href="https://testing-library.com/docs/queries/about/#screen">screen API</a> checking the text returned by using <a href="https://testing-library.com/docs/queries/bytext/">getByText</a> query method.
+Finds a specific element inside of ```<App />``` via the <a href="https://testing-library.com/docs/queries/about/#screen">screen API</a> checking the text returned by using <a href="https://testing-library.com/docs/queries/bytext/">getByText</a> query method.
 
 The ```/Hello World$/i``` that checks for the exact string (ignoring case) of "hello world".
 
