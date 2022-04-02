@@ -18,8 +18,8 @@ A unit test is generally used to test components or functions in isolation. For 
 For every test you want to write, it needs to have .test in the file extension. 
 The setup can either be:
 
-  * __test__ folders with a test file for each component 
-  * __tests__ folder with all test files for all the compoments. 
+  * ```__test__``` folders with a test file for each component 
+  * ```__tests__``` folder with all test files for all the compoments. 
 
 <strong>note:</strong>This project example has a ```__tests__ folder containing all test files.
 
