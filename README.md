@@ -56,5 +56,5 @@ So when you run ```npm test``` you will get this in your VSC terminal:
 
 ![test result](images/initial_test.png)
 
-<strong>Note:</strong> Queries are the methods that Testing Library gives you to find elements on the page. There are several types of queries ("get", "find", "query"); the difference between them is whether the query will throw an error if no element is found or if it will return a Promise and retry. 
+<strong>Note:</strong> Queries are the methods that Testing Library gives you to find elements on the page. There are several <a href="https://testing-library.com/docs/queries/about/">types of queries</a> ("get", "find", "query"); the difference between them is whether the query will throw an error if no element is found or if it will return a Promise and retry. 
 
