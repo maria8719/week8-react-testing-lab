@@ -45,7 +45,7 @@ test('renders Hello World', () => {
 });
 ```
 
-The code example above, it renders the ```<App />``` compoment and any children components it uses to the virtual DOM. Once it is rendered, it then can be tested.
+The code example above renders the ```<App />``` compoment and any children components it uses to the virtual DOM. Once it is rendered, it then can be tested (must be rendered first).
 
 ```JS
 test('renders Hello World', () => {
