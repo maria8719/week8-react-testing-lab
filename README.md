@@ -1,6 +1,12 @@
 # React Testing
 
-The React Testing Library (craeted by Kent C. Dodds) is included in the React App created by Create-React-App (CRA). It is abstracted over the DOM Testing Library as well as uses Jest as it's test environment (i.e. test runner).
+The React Testing Library (created by Kent C. Dodds) is included Create-React-App (CRA). It abstracts over the <a href="https://testing-library.com/docs/dom-testing-library/intro">DOM Testing Library</a> that creates a virtual DOM for testing React components and provides utilities for interacting with the DOM. 
+
+## Jest-DOM
+
+The <a href="https://testing-library.com/docs/ecosystem-jest-dom/">jest-dom library</a>  is a utility tool from the DOM Testing Library that provides extra Jest assertions to use in tests. 
+
+The jest-dom provides two significant enhancements for Jest assertions. First, jest-dom provides over 20 custom DOM matchers that create more descriptive test code. Second, jest-dom also provides better context-specific error messages.
 
 To run tests (in command-line):
 
@@ -10,9 +16,11 @@ npm test
 
 ## Unit Testing
 
-A unit test is generally used to test components or functions in isolation. For functions, unit tests are for input and output; for components, we test props or the callback handlers communicating to the outside.
+A unit test tests one unit of code in isolation. It is generally used to test components or functions. For functions, unit tests are for input and output; for components, testing of props or the callback handlers communicating to the outside.
 
-## Setup
+## RTL Setup
+
+Assuming you are using <a href="https://create-react-app.dev/">CRA</a> for your React boilerplate, all the necessary packages are already installed and configured out of the box.
 
 For every test you want to write, it needs to have .test in the file extension. 
 The setup can either be:

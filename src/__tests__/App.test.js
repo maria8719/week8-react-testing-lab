@@ -13,3 +13,16 @@ test('renders Hello World', () => { // test block and description
   expect(elemText).toBeInTheDocument();
 });
 
+// Test #2
+test('button has correct color', () => {
+  // rendering the App component:
+  render(<App />); 
+  // finding the button element:
+  // https://testing-library.com/docs/queries/byrole/
+  const button = screen.getByRole('button');
+  // https://testing-library.com/docs/ecosystem-jest-dom/
+  // https://github.com/testing-library/jest-dom#tohavestyle
+  // asserting the button color:
+  expect(button).toHaveStyle('color: blue');
+});
+
