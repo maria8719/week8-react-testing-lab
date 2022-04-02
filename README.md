@@ -1,7 +1,6 @@
 # React Testing
 
-The React Testing Library is included in the React App created by Create-React-App (CRA).
-It is abstracted over react-dom and react-dom/test-utils as well as uses Jest as it's test environment.
+The React Testing Library (craeted by Kent C. Dodds) is included in the React App created by Create-React-App (CRA). It is abstracted over the DOM Testing Library as well as uses Jest as it's test environment (i.e. test runner).
 
 To run tests (in command-line):
 
@@ -25,7 +24,7 @@ The setup can either be:
 
 ## Testing a Component
 
-For each test file (e.g. App.test.js), you normally would include the render and screen API from "@testing-library/react". Then also include whichever components you need to test for the unit test. 
+For each test file (e.g. App.test.js), you include the ```render``` method and ```screen``` method which are from the DOM Testing Library which RTL uses as a wrapper. 
 
 ```
 import { render, screen } from '@testing-library/react';
