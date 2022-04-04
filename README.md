@@ -87,3 +87,8 @@ So when you run ```npm test``` you will get this in your VSC terminal:
 ## Testing Library Functions
 
 The RTL has a good many functions to test React compoments and takes time to understand how to use most of them. A good reference is the <a href="https://testing-library.com/docs/react-testing-library/cheatsheet">cheatsheet</a> provided on the website. 
+
+### Additional Resources:
+
+- <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ">https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ</a>
+
