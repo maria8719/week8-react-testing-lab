@@ -6,7 +6,7 @@ The React Testing Library (created by Kent C. Dodds) is included Create-React-Ap
 
 The <a href="https://testing-library.com/docs/ecosystem-jest-dom/">jest-dom library</a>  is a utility tool from the DOM Testing Library that provides extra Jest assertions to use in tests. 
 
-The jest-dom provides two significant enhancements for Jest assertions. First, jest-dom provides over 20 custom DOM matchers that create more descriptive test code. Second, jest-dom also provides better context-specific error messages.
+The jest-dom provides two significant enhancements for Jest assertions. First, jest-dom provides over <a href="https://github.com/testing-library/jest-dom">20 custom DOM matchers</a> that create more descriptive test code. Second, jest-dom also provides better context-specific error messages.
 
 To run tests (in command-line):
 
