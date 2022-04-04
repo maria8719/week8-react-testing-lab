@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from '../App'; // root folder (src/App.js)
 
 // Test #1
@@ -19,10 +19,21 @@ test('renders Hello World', () => { // test block and description
 test('button has text of this is a button', () => {
   render(<App />); 
   // most elements have a built in aria role
-  // https://www.w3.org/TR/html-aria/#docconformance
+  // https://www.w3.org/TR/wai-aria/#role_definitions
+  // note: we have two buttons so we have to be more specific and check for name
+  const button = screen.getByRole('button', { name: 'this is a button' });
+  expect(button).toBeInTheDocument();
+});
+
+// Test #2a
+// this will not pass because there are multiple buttons
+/*
+test('check for 2nd button', () => {
+  render(<App />); 
   const button = screen.getByRole('button');
   expect(button).toBeInTheDocument();
 });
+*/
 
 // Test #3
 test('div has className of blue-div', () => {
@@ -40,9 +51,65 @@ test('div has className of blue-div', () => {
   render(<App />); 
   const div = screen.getByText(/this div is blue$/i);
   // asserting the div has color style of red
-  // note: You cannot assert external styles, only internal styles
   // https://github.com/testing-library/jest-dom#tohavestyle
+  // note: You cannot assert external styles (unless using a transformer but is experimental)
+  // https://www.npmjs.com/package/jest-transform-css
   expect(div).toHaveStyle({
     color: 'red'
   })    
+});
+
+// Test #5
+test('button click caused color change', () => {
+  render(<App />);
+  const button = screen.getByRole('button', { name: 'Change color' });
+  // clicking the button:
+  // https://testing-library.com/docs/dom-testing-library/api-events#fireevent
+  fireEvent.click(button);
+  // asserting button has new color:
+  expect(button).toHaveStyle({
+    backgroundColor: 'maroon'
+  })
+});
+
+// Test #6
+test('check box click causes button toggle disabled and color', () => {
+  // check that button starts out enabled
+  render(<App />);
+  
+  // check that button starts out enabled
+  const colorButton = screen.getByRole('button', { name: 'Change color' });
+  expect(colorButton).toBeEnabled();
+
+   // check out that button starts out with lime color
+  expect(colorButton).toHaveStyle({
+    backgroundColor: 'lime'
+  });
+
+  // check that checkbox starts out unchecked
+  const checkbox = screen.getByRole('checkbox', {name: 'Disable button'});
+  expect(checkbox).not.toBeChecked();
+
+  // click checkbox
+  fireEvent.click(checkbox);
+
+  // check that button is disabled
+  expect(colorButton).not.toBeEnabled();
+
+  // check that button color is now gray
+  expect(colorButton).toHaveStyle({
+    backgroundColor: 'gray'
+  });
+
+  // click checkbox
+  fireEvent.click(checkbox);
+
+  // check that button is enabled
+  expect(colorButton).toBeEnabled();
+
+  // check that button color is now lime
+  expect(colorButton).toHaveStyle({
+    backgroundColor: 'lime'
+  });
+
 });

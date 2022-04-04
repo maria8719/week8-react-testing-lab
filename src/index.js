@@ -1,5 +1,5 @@
 import * as ReactDOMClient from 'react-dom/client';
-import App from 'App';
+import App from './App';
 
 // React 18.x update
 const container = document.getElementById('app');

@@ -84,3 +84,6 @@ So when you run ```npm test``` you will get this in your VSC terminal:
 
 <strong>Note:</strong> Queries are the methods that Testing Library gives you to find elements on the page. There are several <a href="https://testing-library.com/docs/queries/about/">types of queries</a> ("get", "find", "query"); the difference between them is whether the query will throw an error if no element is found or if it will return a Promise and retry. 
 
+## Testing Library Functions
+
+The RTL has a good many functions to test React compoments and takes time to understand how to use most of them. A good reference is the <a href="https://testing-library.com/docs/react-testing-library/cheatsheet">cheatsheet</a> provided on the website. 
