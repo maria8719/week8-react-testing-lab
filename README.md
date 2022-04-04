@@ -92,3 +92,4 @@ The RTL has a good many functions to test React compoments and takes time to und
 
 - <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ">https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ</a>
 
+- <a href="https://www.freecodecamp.org/news/react-testing-library-tutorial-javascript-example-code/">https://www.freecodecamp.org/news/react-testing-library-tutorial-javascript-example-code/</a>
