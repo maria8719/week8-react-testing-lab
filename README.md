@@ -2,6 +2,8 @@
 
 The React Testing Library (created by Kent C. Dodds) is included Create-React-App (CRA). It abstracts over the <a href="https://testing-library.com/docs/dom-testing-library/intro">DOM Testing Library</a> that creates a virtual DOM for testing React components and provides utilities for interacting with the DOM. 
 
+<strong>Note:</strong> This React boilerplate using <a href="https://create-react-app.dev/">CRA</a>, not Parcel.
+
 ## Jest-DOM
 
 The <a href="https://testing-library.com/docs/ecosystem-jest-dom/">jest-dom library</a>  is a utility tool from the DOM Testing Library that provides extra Jest assertions to use in tests. 
