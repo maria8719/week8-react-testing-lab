@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, getByTestId, getByLabelText } from '@testing-library/react';
 import App from '../App'; // root folder (src/App.js)
 
 // Test #1
@@ -112,4 +112,40 @@ test('check box click causes button toggle disabled and color', () => {
     backgroundColor: 'lime'
   });
 
+});
+//***********************************************************Week 8 Lab****************************************************************************
+ 
+//Check that the subscribe button is disabled when the page first loaded.
+
+test("The subscribe button is disabled before typing anything in the input text box", () => {
+    render(<App />);
+
+    expect(screen.getByRole("button", {name: /subscribe/i})).toBeDisabled();
+});
+
+ //
+
+ test('renders Terms link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/Terms$/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+ // Check the ul and li elements.
+
+ test('Check the ul and li elements', () => {
+  render(<App />); 
+
+  const listElement = screen.getByRole('list');
+  const listItems = screen.getAllByRole('listitem');
+
+  // Check the ul element should be in the document.
+  expect(listElement).toBeInTheDocument();
+
+  // Check the ul element should have a class named colors.
+  
+  expect(listElement).toHaveClass('colors');
+  
+  // Check that is exactly 5 list items in the ul element.
+  expect(listItems.length).toEqual(5);
 });
